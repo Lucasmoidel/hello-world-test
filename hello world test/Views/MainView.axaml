@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:hello_world_test.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="100
+			 "
+             x:Class="hello_world_test.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+	<Panel>
+		<TextBlock HorizontalAlignment="Center" Margin="6,10,0,0" TextWrapping="Wrap" Text="do you want me to say hello world?" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+		<Button x:Name="yes" Content="yes" HorizontalAlignment="Right" Margin="0,45,25,0" VerticalAlignment="Top" Width="50" Click="YES_Button_Click" Grid.Column="1"/>
+		<Button x:Name="no" Content="no" HorizontalAlignment="Left" Margin="25,45,0,0" VerticalAlignment="Top" Width="50" Click="NO_Button_Click"/>
+	</Panel>
+</UserControl>
